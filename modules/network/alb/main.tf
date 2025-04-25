@@ -22,7 +22,7 @@ resource "aws_lb_target_group" "tg" {
 
   health_check {
     protocol = "HTTP"
-    path     = "/wp-json"
+    path     = "/"
     port     = "80"
     interval = 30
   }
