@@ -76,7 +76,7 @@ variable "ec2_instance_type" {
 variable "bastion_instance_type" {
   description = "The Bastion EC2 Instance Type to be launched."
   type        = string
-  default = "t2.small"
+  default = "t2.micro"
 }
 
 variable "ami" {

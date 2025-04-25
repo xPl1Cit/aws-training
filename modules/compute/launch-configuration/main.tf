@@ -23,14 +23,14 @@ resource "aws_launch_configuration" "wordpress" {
               sudo service mariadb start
 
               # If WordPress is not already installed, download and install it
-              if [ ! -d "/var/www/html/wordpress" ]; then
-                sudo cd /var/www/html
-                sudo rm -rf /var/www/html/*
+              if [ ! -d "/var/www/html/wordpress/" ]; then
+                sudo cd /var/www/html/
+                sudo rm -rf /var/www/html/* 
                 sudo rm -rf /var/www/html/.[!.]*
                 sudo wget https://wordpress.org/latest.tar.gz
                 sudo tar -xvzf latest.tar.gz
-                sudo cp /var/www/html/wordpress/* /var/www/html/
-                sudo cp /var/www/html/wordpress/.* /var/www/html/
+                sudo cp /var/www/html/wordpress/* /var/www/html/ -rf
+                sudo cp /var/www/html/wordpress/.??* /var/www/html/ -rf
                 sudo rm -f latest.tar.gz
 
                 # Configure wp-config.php to connect to RDS
