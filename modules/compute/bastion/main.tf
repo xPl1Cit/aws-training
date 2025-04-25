@@ -4,7 +4,7 @@ resource "aws_instance" "bastion" {
   subnet_id     = var.public_subnet_ids[0]
   key_name = var.key_name
 
-  security_groups = [ var.bastion_security_group_id ]
+  vpc_security_group_ids = [ var.bastion_security_group_id ]
 
   tags = {
     Name = "${var.project}-bastion-${var.stage}"
