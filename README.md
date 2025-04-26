@@ -24,5 +24,9 @@ These are the steps you need to run to get the project up and running in your AW
 9. Upon completion of the "apply" command, Terraform should output the DNS Name of the Wordpress website you will be able to access now.
 10. Have fun with the Wordpress deployment!
 
+default wordpress login:
+username: admin
+password: admin_password
+
 Special use cases:
 In order to utilize the Basion host a private key is generated and placed inside the folder of the key-pair module. Use this private key when trying to access any of the wordpress instances for maintenance on the EFS files.

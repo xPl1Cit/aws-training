@@ -23,8 +23,8 @@ variable "max_size" {
   type        = number
 }
 
-variable "launch_configuration_id" {
-  description = "The ID for the launch configuration to be used by the EC2 instances."
+variable "launch_template_id" {
+  description = "The ID for the launch template to be used by the EC2 instances."
   type        = string
 }
 

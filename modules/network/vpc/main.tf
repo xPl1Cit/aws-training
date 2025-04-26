@@ -12,7 +12,7 @@ module "internet_gateway" {
     project = var.project
     stage = var.stage
 
-    vpc_id = aws_vpc.main.id
+    vpc_id = aws_vpc.main.id 
 }
 
 module "nat_gateway" {

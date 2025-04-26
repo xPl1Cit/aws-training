@@ -41,8 +41,8 @@ module "key_pair" {
   stage   = var.stage
 }
 
-module "ec2_launch_configuration" {
-  source = "../compute/launch-configuration"
+module "ec2_launch_template" {
+  source = "../compute/launch-template"
   project = var.project
   stage   = var.stage
 
@@ -67,7 +67,7 @@ module "ec2_auto_scaling_group" {
 
   public_subnet_ids = module.vpc.private_app_subnet_ids
   
-  launch_configuration_id = module.ec2_launch_configuration.launch_configuration_id
+  launch_template_id = module.ec2_launch_template.launch_template_id
   target_group_arns = [ module.vpc.target_group_arn ]
 
   desired_capacity = var.desired_capacity

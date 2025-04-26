@@ -94,7 +94,7 @@ variable "bastion_ami" {
 variable "desired_capacity" {
   description = "The Number of EC2 instances to be launched by default."
   type        = number
-  default = 2
+  default = 1
 
   validation {
     condition = (
