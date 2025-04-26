@@ -23,3 +23,6 @@ These are the steps you need to run to get the project up and running in your AW
 8. When Terraform is up and running, please log into your AWS console to make sure all the resources were deployed successfully.
 9. Upon completion of the "apply" command, Terraform should output the DNS Name of the Wordpress website you will be able to access now.
 10. Have fun with the Wordpress deployment!
+
+Special use cases:
+In order to utilize the Basion host a private key is generated and placed inside the folder of the key-pair module. Use this private key when trying to access any of the wordpress instances for maintenance on the EFS files.
