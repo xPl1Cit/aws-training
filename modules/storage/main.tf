@@ -12,6 +12,6 @@ resource "aws_efs_mount_target" "wordpress" {
 
   file_system_id  = aws_efs_file_system.wordpress.id
   subnet_id       = each.value
-  security_groups = [var.security_group_ec2_id]
+  security_groups = [var.security_group_efs_id]
 }
 

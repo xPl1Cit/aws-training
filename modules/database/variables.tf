@@ -32,3 +32,8 @@ variable "private_db_subnet_ids" {
   description = "The Subnet IDs for the Database to launch into."
   type        = list(string)
 }
+
+variable "rds_sg_id" {
+  description = "The ID of the RDS security group."
+  type        = string
+}

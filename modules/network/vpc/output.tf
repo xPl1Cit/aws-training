@@ -18,9 +18,19 @@ output "ec2_sg_id" {
   description = "The ID of the security group for the EC2 instances"
 }
 
+output "efs_sg_id" {
+  value       = module.security_groups.efs_sg_id
+  description = "The ID of the security group for the EFS instance"
+}
+
 output "bastion_sg_id" {
   value       = module.security_groups.bastion_sg_id
   description = "The ID of the security group for the Bastion host"
+}
+
+output "rds_sg_id" {
+  value       = module.security_groups.rds_sg_id
+  description = "The ID of the security group for the RDS DB"
 }
 
 output "load_balancer_dns" {

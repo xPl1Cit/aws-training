@@ -15,6 +15,7 @@ resource "aws_db_instance" "wordpress" {
   allocated_storage = 20
   max_allocated_storage = 100
   db_subnet_group_name = aws_db_subnet_group.wordpress.name
+  vpc_security_group_ids = [ var.rds_sg_id ]
   multi_az          = true 
   storage_type      = "gp2"
   publicly_accessible = false 

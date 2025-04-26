@@ -17,6 +17,7 @@ module "database" {
     stage   = var.stage
 
     private_db_subnet_ids = module.vpc.private_db_subnet_ids
+    rds_sg_id = module.vpc.rds_sg_id
     db_instance_type = var.db_instance_type
     db_name = var.db_name
     db_username = var.db_username
@@ -31,7 +32,7 @@ module "efs" {
   private_app_subnet_ids = {
     for idx, id in module.vpc.private_app_subnet_ids : idx => id
   }
-  security_group_ec2_id = module.vpc.ec2_sg_id
+  security_group_efs_id = module.vpc.efs_sg_id
 }
 
 module "key_pair" {
@@ -51,7 +52,6 @@ module "ec2_launch_configuration" {
   key_name = module.key_pair.key_name
 
   rds_endpoint = module.database.db_endpoint
-  rds_port = module.database.db_port
   db_name = var.db_name
   db_user = var.db_username
   db_password = var.db_password

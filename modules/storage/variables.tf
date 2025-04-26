@@ -13,6 +13,6 @@ variable "private_app_subnet_ids" {
   type = map(string)
 }
 
-variable "security_group_ec2_id" {
+variable "security_group_efs_id" {
   type = string
 }

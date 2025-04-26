@@ -38,11 +38,6 @@ variable "rds_endpoint" {
   type        = string
 }
 
-variable "rds_port" {
-  description = "The Database Port to connect to."
-  type        = string
-}
-
 variable "efs_dns_name" {
   description = "The DNS for the EFS to connect to."
   type        = string
