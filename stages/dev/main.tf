@@ -10,6 +10,6 @@ module "wordpress" {
   
   ec2_instance_type = var.ec2_instance_type
   desired_capacity = var.desired_capacity
-  min_size = var.max_size
+  min_size = var.min_size
   max_size = var.max_size
 }
