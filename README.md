@@ -2,11 +2,11 @@ Welcome to my AWS Enablement Capstone Project created on my local machine. My Na
 
 This project was created with the following instructions:
 
-1. 
-2. 
-3. 
-4. 
-5. 
+1. Build an environment to run Terraform 
+2. Install the Terraform software and ensure it works properly
+3. Test the environment by creating a simple virtual machine 
+4. Build a website similar to the Space Invaders site you built in class by reusing modules
+5. Put a copy of your code in Git, then destroy the infrastructure; leave the environment intact
 
 This Terraform Project utilizes 4 stages and several modules to run a clean Wordpress website. 
 
@@ -22,4 +22,4 @@ These are the steps you need to run to get the project up and running in your AW
 7. Now that Terraform is initialized, please run the following command to run the Terraform project: "terraform apply -auto-approve"
 8. When Terraform is up and running, please log into your AWS console to make sure all the resources were deployed successfully.
 9. Upon completion of the "apply" command, Terraform should output the DNS Name of the Wordpress website you will be able to access now.
-10. Have fun with the deployment!
+10. Have fun with the Wordpress deployment!
