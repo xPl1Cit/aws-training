@@ -17,4 +17,4 @@ sudo systemctl enable docker
 sudo systemctl start docker
 newgrp docker
 
-sudp curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | sudo bash
+sudo curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | sudo bash
