@@ -3,5 +3,5 @@
 # Input arguments
 REGION="${1:-us-east-1}"
 
-./delete-cluster.sh $REGION
-./delete-ecr.sh $REGION
+bash delete-cluster.sh $REGION
+bash delete-ecr.sh $REGION

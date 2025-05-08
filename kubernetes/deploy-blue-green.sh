@@ -8,9 +8,9 @@ VERSION="${3:-latest}"  # Version of the image to deploy
 echo "Deploying $DEPLOYMENT_COLOR version with image version $VERSION in region $REGION"
 
 # Call the deployment script with the selected region, color, and version
-./deploy-pods.sh "$REGION" "$VERSION" "$DEPLOYMENT_COLOR"
+bash deploy-pods.sh "$REGION" "$VERSION" "$DEPLOYMENT_COLOR"
 
 # Call the service deployment script with the selected color and version
-./deploy-service.sh "$VERSION" "$DEPLOYMENT_COLOR"
+bash deploy-service.sh "$VERSION" "$DEPLOYMENT_COLOR"
 
 echo "$DEPLOYMENT_COLOR deployment and services deployed successfully!"

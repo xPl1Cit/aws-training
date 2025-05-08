@@ -4,4 +4,4 @@
 REGION="${1:-us-east-1}"  # Default to us-east-1 if not provided
 VERSION="${2:-latest}"  # Version of the image to deploy
 
-./delete-blue-green.sh "$REGION" "blue" "$VERSION"
+bash delete-blue-green.sh "$REGION" "blue" "$VERSION"

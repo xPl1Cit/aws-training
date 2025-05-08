@@ -41,7 +41,7 @@ run_deploy_script_in_dir() {
   # Check if the deploy-to-ecr.sh script exists and is executable
   if [ -f "./deploy-to-ecr.sh" ]; then
     echo "Running deploy-to-ecr.sh in $DIR with region $REGION and version $VERSION..."
-    ./deploy-to-ecr.sh $REGION $VERSION
+    bash deploy-to-ecr.sh $REGION $VERSION
   else
     echo "deploy-to-ecr.sh script not found in $DIR"
     exit 1
