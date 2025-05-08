@@ -63,3 +63,5 @@ These are the steps you need to run to get the project up and running in your AW
 Special use cases:
 In order to switch between blue and green deployments (initial setup deploys blue by default) please utilize the scripts deploy-blue-deployment.sh and deploy-green-deployment.sh
 You can manually add or remove any deployments, scripts etc by utilizing the given scripts. Redeployment is also possible with the given scripts.
+
+To shutdown the application please use the perform-teardown.sh script.

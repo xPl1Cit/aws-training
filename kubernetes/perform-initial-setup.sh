@@ -14,7 +14,7 @@ LB_DNS_NAME=$(kubectl get svc angular-lb --namespace default -o jsonpath='{.stat
 
 # Check if DNS name was retrieved
 if [ -z "$LB_DNS_NAME" ]; then
-  echo "Failed to retrieve the DNS name of the LoadBalancer."
+  echo "Failed to retrieve the DNS name of the LoadBalancer. Please utilize the get-lb-name.sh script when the Loadbalancer is ready."
   exit 1
 else
   echo "You will be able to access the Angular app via: http://$LB_DNS_NAME"
