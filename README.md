@@ -49,7 +49,17 @@ This Kubernetes cluster will run an Angular App connecting to a Spring Boot Micr
 
 These are the steps you need to run to get the project up and running in your AWS account.
 
-1. Install the following tools on your machine: AWS CLI (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), Docker (https://docs.docker.com/engine/install/), Kubectl (https://kubernetes.io/docs/tasks/tools/), EKSCTL (https://eksctl.io/installation/), Helm(https://helm.sh/docs/intro/install/), Git (https://git-scm.com/downloads)
+1. Install the following tools on your machine: AWS CLI (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), Docker (https://docs.docker.com/engine/install/), Kubectl (https://kubernetes.io/docs/tasks/tools/), EKSCTL (https://eksctl.io/installation/), Helm(https://helm.sh/docs/intro/install/), Git (https://git-scm.com/downloads) -> On AWS EC2 utilize the install-ec2-tools.sh script
 2. Make sure you have your AWS security credentials in form of an access key with an ID and Secret (https://docs.aws.amazon.com/IAM/latest/UserGuide/access-key-self-managed.html)
-2. Utilize git clone on this repository (https://github.com/xPl1Cit/aws-training)
-3. Change into the folder you just copied.
+3. Utilize git clone on this repository (https://github.com/xPl1Cit/aws-training)
+4. To run the project you will need to authenticate your AWS CLI with the AWS API. To achieve this, please run the following command: "aws configure". You will need the following values (Access Key ID: "{Your Access Key ID}", Access Key Secret: "{Your Access Key Secret}", Default Region: "us-east-1", Output Format: "json")
+5. Change into the folder you just copied. In here please change into the kubernetes folder
+6. Here you will find many delete and deploy scripts.
+7. To initially deploy the Angular, Springboot, PostgreSQL Tech stack please utilize the perform-initial-setup.sh script (You can provide a Region and a version as inline arguments, defaults to "us-east-1" and "latest")
+8. This will deploy the complete application and at the end it will give you the link for the Angular app to access.
+9. Note: It will take a couple of minutes after the script is done for the load balancer to receive its full DNS propagation, only then will you be able to access the application.
+10. Have fun with the Angular deployment!
+
+Special use cases:
+In order to switch between blue and green deployments (initial setup deploys blue by default) please utilize the scripts deploy-blue-deployment.sh and deploy-green-deployment.sh
+You can manually add or remove any deployments, scripts etc by utilizing the given scripts. Redeployment is also possible with the given scripts.
