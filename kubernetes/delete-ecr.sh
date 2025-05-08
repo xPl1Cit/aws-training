@@ -24,5 +24,5 @@ delete_ecr_repository() {
 }
 
 # Delete the repositories
-delete_ecr_repository "angular"
-delete_ecr_repository "spring"
+delete_ecr_repository "capstone-al-angular"
+delete_ecr_repository "capstone-al-spring"

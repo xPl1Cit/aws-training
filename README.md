@@ -49,7 +49,7 @@ This Kubernetes cluster will run an Angular App connecting to a Spring Boot Micr
 
 These are the steps you need to run to get the project up and running in your AWS account.
 
-1. Install the following tools on your machine: AWS CLI (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), Docker (https://docs.docker.com/engine/install/), Kubectl (https://kubernetes.io/docs/tasks/tools/), EKSCTL (https://eksctl.io/installation/), Helm(https://helm.sh/docs/intro/install/), Git (https://git-scm.com/downloads) -> On AWS EC2 utilize the install-ec2-tools.sh script
+1. Install the following tools on your machine: AWS CLI (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), Docker (https://docs.docker.com/engine/install/), Kubectl (https://kubernetes.io/docs/tasks/tools/), EKSCTL (https://eksctl.io/installation/), Helm(https://helm.sh/docs/intro/install/), Git (https://git-scm.com/downloads) -> On AWS EC2 utilize the install-ec2-tools.sh script (includes everything except for git, please make sure to reload your session after executing the script to update your users rights)
 2. Make sure you have your AWS security credentials in form of an access key with an ID and Secret (https://docs.aws.amazon.com/IAM/latest/UserGuide/access-key-self-managed.html)
 3. Utilize git clone on this repository (https://github.com/xPl1Cit/aws-training)
 4. To run the project you will need to authenticate your AWS CLI with the AWS API. To achieve this, please run the following command: "aws configure". You will need the following values (Access Key ID: "{Your Access Key ID}", Access Key Secret: "{Your Access Key Secret}", Default Region: "us-east-1", Output Format: "json")
