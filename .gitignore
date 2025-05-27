@@ -38,3 +38,7 @@ terraform.rc
 *.exe
 *.hcl
 *.pem
+
+**/devops/result/*
+**/devops/vote/*
+**/devops/worker/*
