@@ -65,3 +65,31 @@ In order to switch between blue and green deployments (initial setup deploys blu
 You can manually add or remove any deployments, scripts etc by utilizing the given scripts. Redeployment is also possible with the given scripts.
 
 To shutdown the application please use the perform-teardown.sh script.
+
+
+
+DevOps:
+
+The thrid project in the devops folder was created with the following instructions:
+
+1. Configure Git to manage your source code for your application
+2. Leverage a package manager to assist with your application’s prerequisites
+3. Utilize containerization and workflow automation to run your application
+4. Use Jenkins to build your CI/CD Pipelines
+5. Manage multiple versions of your application using Jenkins and Kubernetes
+
+Similar to the second project this will launch a Kubernetes Cluster on AWS with an Angular App connecting to a Spring Boot Microservice that runs with a PostgreSQL database. Additionally, I added a Grafana/Prometheus instance for monitoring the Cluster performance as well as the SpringBoot Backend.
+
+These are the steps you need to run to get the project up and running in your AWS account.
+
+1. Setup an EC2 instance with the same rights as our "CourseAttendeePolicy" and with at least 20GiB of Storage (less can prevent simultaneous builds from running smoothely) and make sure that the corresponding Security group allows HTTP/TCP 8080 incoming traffic to the instance
+2. Install Git (https://git-scm.com/downloads)
+3. Utilize the install-jenkins.sh script to install Jenkins as well as all other neccessary tools like Docker, AWS CLI etc for the Jenkins to perform run the pipelines (includes everything except for git, please make sure to reload your session after executing the script to update your users rights)
+4. Upon installing the script you will need to restart the EC2 instance, please make sure to note down you initial Admin Password first (If you missed this run sudo systemctl status jenkins). Upon restarting the Jenkins will soon be available at the Public IP on Port 8080.
+5. There are 3 Github repositories that are used within Jenkins. Please follow the guide inside the k8s repo to complete the Jenkins setup:
+
+- https://github.com/xPl1Cit/aws-training-devops-k8s
+- https://github.com/xPl1Cit/aws-training-devops-angular
+- https://github.com/xPl1Cit/aws-training-devops-spring
+
+If you have any questions or I need to bugfix anything please always feel free to contact me on Slack!
