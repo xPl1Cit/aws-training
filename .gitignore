@@ -39,6 +39,5 @@ terraform.rc
 *.hcl
 *.pem
 
-**/devops/result/*
-**/devops/vote/*
-**/devops/worker/*
+**/devops/angular/*
+**/devops/spring/*
